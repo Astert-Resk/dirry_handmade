@@ -1,0 +1,81 @@
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  color: #333333;
+  background-color: #fffdf7;
+  font-family: "Meiryo", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  line-height: 1.8;
+}
+
+/* 紙に書いている風 */
+.diary {
+  max-width: 760px;
+  margin: 48px auto;
+  padding: 24px;
+  background:
+    linear-gradient(#fffdf7, #fffdf7),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0,
+      rgba(0, 0, 0, 0) 28px,
+      #f5f1e6 28px,
+      #f5f1e6 29px
+    );
+  border: 1px dashed #e5dccb;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* タイトルと日付 */
+.diary-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.diary-title {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 0 0.4em;
+  background-image: linear-gradient(#fff3c4, #fff3c4);
+  background-repeat: no-repeat;
+  background-size: 100% 0.6em;
+  background-position: 0 80%;
+  border-radius: 6px;
+}
+
+.diary-date {
+  font-size: 0.9rem;
+  color: #777777;
+}
+
+
+
+/* 本文 */
+.diary-body p { margin: 1em 0; }
+
+
+/* 前後ナビ */
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.4em;
+}
+.nav-link {
+  text-decoration: none;
+  color: #3a6f6f;
+  padding: 0.4em 0.6em;
+  border: 1px dashed #cde4e4;
+  background: #f5fbfb;
+  border-radius: 10px;
+}
+.nav-link:hover { text-decoration: underline; }
+
+@media (max-width: 768px) {
+  .diary { margin: 24px 16px; padding: 16px; }
+  .diary-title { font-size: 1.6rem; }
+}
